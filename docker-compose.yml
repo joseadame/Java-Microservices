@@ -27,12 +27,14 @@ services:
     networks:
       - postgres
     restart: unless-stopped
-  rabbitmq:
-    image: rabbitmq:3.9.11-management-alpine
-    container_name: rabbitmq
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
     ports:
-      - "5672:5672"
-      - "15672:15672"
+      # Port used for the Zipkin UI and HTTP Api
+      - "9411:9411"
+      # Uncomment if you set SCRIBE_ENABLED=true
+      # - 9410:9410
 
 networks:
   postgres:
