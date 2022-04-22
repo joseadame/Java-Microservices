@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 @Builder
@@ -14,7 +15,7 @@ import java.time.LocalDateTime;
 public class NotificationRequest {
     String notificationMessage;
     String sender;
-    LocalDateTime sentAt;
+    Date sentAt;
     String toCustomerEmail;
     Integer toCustomerId;
 }

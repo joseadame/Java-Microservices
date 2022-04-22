@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 @Builder
@@ -29,7 +30,7 @@ public class Notification {
     Integer Id;
     String notificationMessage;
     String sender;
-    LocalDateTime sentAt;
+    Date sentAt;
     String toCustomerEmail;
     Integer toCustomerId;
 }
